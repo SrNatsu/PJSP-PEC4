@@ -1,0 +1,64 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.config {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.size-selector, .mines-selector {
+  margin: 10px 0;
+}
+
+.size-selector label {
+  margin-right: 15px;
+}
+
+#game-board {
+  display: grid;
+  gap: 2px;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #999;
+  cursor: pointer;
+}
+
+.cell.revealed {
+  background-color: #fff;
+}
+
+.cell.mine {
+  background-color: #ff0000;
+}
+
+#game-status {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+.game-board {
+  display: grid;
+}
+.size-6 {
+  grid-template-columns: repeat(6, 30px);
+}
+.size-12 {
+  grid-template-columns: repeat(12, 30px);
+}
+.size-24 {
+  grid-template-columns: repeat(24, 30px);
+}

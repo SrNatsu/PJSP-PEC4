@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscaminas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="config">
+        <h2>Configuración del juego</h2>
+        <div class="size-selector">
+            <label>
+                <input type="radio" name="size" value="6" checked /> 6x6
+            </label>
+            <label>
+                <input type="radio" name="size" value="12" /> 12x12
+            </label>
+            <label>
+                <input type="radio" name="size" value="24" /> 24x24
+            </label>
+        </div>
+        <div class="mines-selector">
+            <label>Número de minas:
+                <input type="number" id="mines" min="1" value="5" />
+            </label>
+        </div>
+    </div>
+    <div id="game-board"></div>
+</div>
+<script src="game.js" type="module"></script>
+</body>
+</html>
