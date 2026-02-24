@@ -1,14 +1,46 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/MGtaeSwJ)
-# 20242-pec-4
+# 💻 PEC 4 - Programación en JavaScript para Programadores
 
-## <img class="flag-img" width="20px" height="auto" src="https://flagicons.lipis.dev/flags/4x3/es-ct.svg" alt="Flag of Catalonia"> PAC 3
+Este repositorio contiene la solución a la **PEC 4** de la asignatura **Programación en JavaScript para Programadores** de la UOC.
 
-Aquest és el repositori de la PAC 4 de l'assignatura Programació en Javascript per a Programadors.
+El objetivo de esta práctica es dominar la manipulación del **DOM** (Document Object Model) y la gestión de **eventos** en JavaScript mediante la creación de un juego funcional de Buscaminas (*Minesweeper*).
 
-Trobaràs l'enunciat amb els exercicis a realitzar en el fitxer `README_ca.md`. Segueix les indicacions que et donem en l'enunciat per realitzar la PAC.
+## 🚀 Funcionalidades
 
-## <img class="flag-img" width="20px" height="auto" src="https://flagicons.lipis.dev/flags/4x3/es.svg" alt="Flag of Spain"> PEC 3
+El juego implementado cuenta con las siguientes características:
 
-Este es el repositorio de la PEC 4 de la asignatura Programación en JavaScript para Programadores.
+* **Configuración dinámica:** El usuario puede seleccionar el tamaño del tablero y el número de minas antes de empezar.
+* **Validación de entradas:** Control automático del número máximo de minas permitido según el tamaño del tablero.
+* **Algoritmo de inundación (Flood Fill):** Al pulsar en una casilla vacía (0), se revelan automáticamente todas las casillas adyacentes vacías de forma recursiva.
+* **Estados de juego:** Detección automática de condiciones de victoria (todas las casillas seguras reveladas) y derrota (mina detonada).
+* **Interfaz reactiva:** Actualización visual del tablero mediante clases CSS (`revealed`, `mine`).
 
-Encontrarás el enunciado con los ejercicios a realizar en el fichero `README_es.md`. Sigue las indicaciones que te damos en el enunciado para realizar la PEC.
+## 📂 Estructura del Código
+
+La solución se ha estructurado siguiendo el paradigma de Programación Orientada a Objetos (POO), separando la lógica de negocio de la interfaz de usuario en el archivo `src/pec4/pec4.js`:
+
+1.  **`GameConfig`**: Gestiona el formulario de entrada, capturando el tamaño y validando las minas.
+2.  **`Board`**: Se encarga de la generación de la matriz de datos, colocando las minas aleatoriamente y calculando los números de proximidad.
+3.  **`GameLogic`**: Contiene las reglas del juego. Gestiona el estado de las celdas (`Set` de reveladas), comprueba condiciones de victoria y ejecuta la lógica recursiva de revelado.
+4.  **`UI`**: Manipula el DOM. Renderiza el tablero, gestiona los clics en las celdas y muestra los mensajes de estado (Ganar/Perder).
+5.  **`Game`**: Clase principal que orquesta la inicialización de todas las anteriores y arranca la partida.
+
+## 🚀 Instalación y ejecución de tests
+
+Para ejecutar el proyecto y verificar los tests, asegúrate de tener [Node.js](https://nodejs.org/) instalado.
+
+1.  **Instalar dependencias:**
+    ```bash
+    npm install
+    ```
+
+2.  **Ejecutar los tests unitarios (Jest):**
+    ```bash
+    npm test
+    ```
+    *(Pulsa `a` para correr todos los tests).*
+
+3.  **Ejecutar la versión web:**
+    ```bash
+    npm run serve
+    ```
+    Seleccionar la carpeta ```web``` dentro de ```src```.
